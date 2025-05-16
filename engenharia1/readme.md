@@ -50,3 +50,7 @@ Ignorar ou negligenciar a segurança pode reduzir os custos no curto prazo, mas 
 
 ## Sobre o Slide 57
 A melhor maneira de construir um projeto complexo de software é construindo um sistema básico de ponta a ponta, dessa forma o cliente possui uma aplicação funcionando que resolve mesmo que de forma não ideal o problema.
+
+
+## Programa semelhante ao "estacionamento"
+
