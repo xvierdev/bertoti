@@ -11,6 +11,9 @@ The terms “programming” and “software engineering” have been used interc
  
 Unlike those more established engineering professions, current software engineering theory or practice is not nearly as rigorous. Aeronautical engineers must follow rigid guidelines and practices, because errors in their calculations can cause real damage; programming, on the whole, has traditionally not followed such rigorous practices. But, as software becomes more integrated into our lives, we must adopt and rely on more rigorous engineering methods. We hope this book helps others see a path toward more reliable software practices.
 
+### _Comentário_  
+A engenharia de software e a programação são termos que tem sido usado de forma intercambiável mas não são a mesma coisa, a engenharia usa métodos rigorosos e definidos para cumprir sua finalidade e produzir feitos reais, a engenharia de software também produz feitos reais embora sejam menos tangíveis. A aplicação dos métodos da engenharia na produção de software não é tão rigorosa como na engenharia mecânica ou civil ou outra qualquer, porém a medida que o software integra cada vez mais nossas vidas mais serão aplicados os métodos da engenharia para produção desses softwares com cada vez mais qualidade.
+
 ### Parte 2
 
 Programming Over Time
@@ -29,10 +32,9 @@ How an organization will need to adapt as it evolves
 Trade-offs and Costs
 How an organization makes decisions, based on the lessons of Time and Change and Scale and Growth
 
-## Resumo
+### _Comentário_  
 
-A engenharia de software procurar seguir um padrão mais rigorozo para a construção de softwares que serão aplicações reais do dia a dia, porém, não apresenta ainda tanto rigor como as engenharias tradicionais embora diferentemente de apenas programar códigos, procurar aplicar os métodos da engenharia na construção dessas aplicações.
-A engenharia de software aplica esses métodos preocupando-se com todas as ferramentas e processos que utiliza para construir e manter esse software ao longo de tempo, para que ele se mantenha viável em relação ao custo, escalabilidade e manutenabilidade com o passar dos anos.
+A engenharia de software aplica os métodos da engenharia baseado na experiência dos muitos anos do Google com a produção de software preocupando-se com todas as ferramentas e processos que utiliza para construir e manter esse software ao longo de tempo, para que ele se mantenha viável em relação ao custo, escalabilidade e manutenabilidade com o passar dos anos.
 
 ## Três exemplos de Tradeoff
 
