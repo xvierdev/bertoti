@@ -29,7 +29,7 @@ How an organization will need to adapt as it evolves
 Trade-offs and Costs
 How an organization makes decisions, based on the lessons of Time and Change and Scale and Growth
 
-## Resumo solicitado pelo professor.
+## Resumo
 
 A engenharia de software procurar seguir um padrão mais rigorozo para a construção de softwares que serão aplicações reais do dia a dia, porém, não apresenta ainda tanto rigor como as engenharias tradicionais embora diferentemente de apenas programar códigos, procurar aplicar os métodos da engenharia na construção dessas aplicações.
 A engenharia de software aplica esses métodos preocupando-se com todas as ferramentas e processos que utiliza para construir e manter esse software ao longo de tempo, para que ele se mantenha viável em relação ao custo, escalabilidade e manutenabilidade com o passar dos anos.
@@ -54,3 +54,141 @@ A melhor maneira de construir um projeto complexo de software é construindo um 
 
 ## Programa semelhante ao "estacionamento"
 
+### Product.java
+
+```java
+package market;
+
+public class Product{
+    private String name;
+    private String brand;
+    private String supplier;
+    private String code;
+    private double price;
+    private double weight;
+
+    public Product(String name, String brand, String supplier, String code, double price, double weight){
+        this.name = name;
+        this.brand = brand;
+        this.supplier = supplier;
+        this.code = code;
+        this.price = price;
+        this.weight = weight;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getSupplier() {
+        return supplier;
+    }
+
+    public void setSupplier(String supplier) {
+        this.supplier = supplier;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+}
+```
+
+### Market.java
+
+```java
+package market;
+
+import java.util.List;
+import java.util.LinkedList;
+
+public class Market {
+    private List<Product> products = new LinkedList<Product>();
+
+    public void addProduct(Product product) {
+        products.add(product);
+    }
+
+    public Product searchProductCode (String code){
+        for(Product product:products){
+            if(product.getCode().equals(code)) return product;
+        }
+        return null;
+    }
+
+    public List<Product> searchProductSupplier(String supplier){
+        List<Product> find = new LinkedList<Product>();
+        for(Product product:products){
+            if(product.getSupplier().equals(supplier)) find.add(product);
+        }
+        return find;
+    }
+
+    public List<Product> getProducts(){
+        return products;
+    }
+}
+```
+
+### Test.java
+
+```java
+package market;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class Teste {
+
+	@Test
+	void test() {
+		
+		Market market = new Market();
+        market.addProduct(new Product("farinha", "ki sabor", "jj distrubuidora ltda", "8334720-394", 2.89, 1));
+        market.addProduct(new Product("sal", "cisne", "caiçara distrubuidora ltda", "456674-468", 1.79, 0.5));
+        market.addProduct(new Product("arroz", "camil", "jj distrubuidora", "5698745-768", 18.9, 5));
+		
+		assertEquals(market.getProducts().size(), 3);
+		
+		Product product = market.searchProductCode("8334720-394");
+		
+		assertEquals(product.getName(), "farinha");
+		
+	}
+
+}
+```
