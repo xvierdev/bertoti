@@ -1,4 +1,4 @@
-public class Empresa extends ClienteComum {
+public class Empresa extends Cliente {
     public final String cnpj;
 
     public Empresa(String idConta, long saldo, String cnpj, long limiteEmprestimo) {

@@ -1,5 +1,5 @@
-public class Aposentado extends ClienteComum {
-    public Aposentado(String idConta, long saldo, long limiteEmprestimo) {
+public class Aposentado extends Cliente {
+    public Aposentado(int idConta, long saldo, long limiteEmprestimo) {
         super(idConta, saldo, new LimiteEmprestimo(limiteEmprestimo));
     }
 }

@@ -1,15 +1,15 @@
-public class ClienteComum {
+public class Cliente {
     public final String idConta;
     private long saldo;
     private EmprestimoStrategy emprestimoStrategy;
 
-    public ClienteComum(String idConta, long saldo) {
+    public Cliente(String idConta, long saldo) {
         this.idConta = idConta;
         this.saldo = saldo;
         this.emprestimoStrategy = new SemEmprestimo();
     }
 
-    public ClienteComum(String idConta, long saldo, EmprestimoStrategy strategy) {
+    public Cliente(String idConta, long saldo, EmprestimoStrategy strategy) {
         this.idConta = idConta;
         this.saldo = saldo;
         this.emprestimoStrategy = strategy;

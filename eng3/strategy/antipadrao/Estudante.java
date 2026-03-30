@@ -1,6 +1,6 @@
-public class Estudante extends ClienteComum {
+public class Estudante extends Cliente {
 
-	public Estudante(String idConta, long saldo) {
+	public Estudante(int idConta, long saldo) {
 		super(idConta, saldo);
 	}
 

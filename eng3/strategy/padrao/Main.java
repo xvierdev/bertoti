@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        ClienteComum cc = new ClienteComum("cc1", 1000);
+        Cliente cc = new Cliente("cc1", 1000);
         System.out.println("ClienteComum saldo inicial: " + cc.ConsultaSaldo());
         cc.Deposito(500);
         System.out.println("Depois deposito 500: " + cc.ConsultaSaldo());

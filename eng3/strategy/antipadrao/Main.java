@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        ClienteComum cc = new ClienteComum("cc1", 1000);
+        Cliente cc = new Cliente(100, 1000);
         System.out.println("ClienteComum saldo inicial: " + cc.ConsultaSaldo());
         cc.Deposito(500);
         System.out.println("Depois deposito 500: " + cc.ConsultaSaldo());
@@ -9,16 +9,16 @@ public class Main {
         long saqueInvalid = cc.Saque(2000);
         System.out.println("Saque 2000 retornou: " + saqueInvalid);
 
-        Estudante est = new Estudante("est1", 300);
+        Estudante est = new Estudante(101, 300);
         System.out.println("Estudante saldo inicial: " + est.ConsultaSaldo());
         est.Deposito(200);
         System.out.println("Estudante depois deposito: " + est.ConsultaSaldo());
 
-        Empresa emp = new Empresa("emp1", 5000, "12.345.678/0001-99", 10000);
+        Empresa emp = new Empresa(102, 5000, "12.345.678/0001-99", 10000);
         System.out.println("Empresa emprestimo 8000: " + emp.Emprestimo(8000));
         System.out.println("Empresa emprestimo 20000: " + emp.Emprestimo(20000));
 
-        Aposentado ap = new Aposentado("ap1", 1500, 2000);
+        Aposentado ap = new Aposentado(103, 1500, 2000);
         System.out.println("Aposentado emprestimo 1500: " + ap.Emprestimo(1500));
         System.out.println("Aposentado emprestimo 3000: " + ap.Emprestimo(3000));
     }
