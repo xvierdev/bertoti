@@ -9,6 +9,7 @@ public class PagamentoCartao implements PagamentoStrategy {
 
     @Override
     public void pagar(int valor) {
-        System.out.println("Pago " + valor + " com cartão final " + numeroCartao.substring(numeroCartao.length() - 4));
+        System.out.println("Pago " + valor * 1.05 + " com cartao final " + numeroCartao.substring(numeroCartao.length() - 4));
+        System.out.println("Com uma taxa de 5%.");
     }
 }

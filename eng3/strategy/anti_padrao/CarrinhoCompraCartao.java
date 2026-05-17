@@ -10,6 +10,6 @@ public class CarrinhoCompraCartao extends CarrinhoCompra {
 
     @Override
     public void finalizarCompra() {
-        System.out.println("Pago " + valorTotal + " com cartão final " + numeroCartao.substring(numeroCartao.length() - 4));
+        System.out.println("Pago " + valorTotal * 1.05 + " (+ 5% taxa) com cartao final " + numeroCartao.substring(numeroCartao.length() - 4));
     }
 }
